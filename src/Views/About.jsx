@@ -85,11 +85,13 @@ const About = () => {
 
           <div className="rounded-lg border border-black/10 bg-[#eef3ef] p-4 shadow-sm">
             <div className="relative grid min-h-[520px] place-items-center overflow-hidden rounded-md bg-white">
-              <img
-                className="max-h-[520px] w-full object-contain"
-                src={activePhoto.src}
-                alt={`Khim Reaksmey ${activePhoto.label}`}
-              />
+              <div className='py-5'>
+                <img
+                  className="max-h-[520px] w-full rounded-xl object-contain"
+                  src={activePhoto.src}
+                  alt={`Khim Reaksmey ${activePhoto.label}`}
+                />
+              </div>
 
               <button
                 className="absolute left-4 top-1/2 grid min-w-12 -translate-y-1/2 place-items-center rounded-full bg-[#17211d]/90 px-3 py-2 text-sm font-bold text-white shadow-md transition hover:bg-[#0f8b6f]"
