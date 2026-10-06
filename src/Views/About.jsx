@@ -4,6 +4,9 @@ import goalImg from '/public/images/goal-image.jpg' // ឬ Import តាម Rela
 import img1 from '/public/images/my_image01.jpg'
 import img2 from '/public/images/my_image02.jpg'
 import img3 from '/public/images/my_image03.jpg'
+import Mycv from '/public/images/CV_2026.jpg'
+import down from '/public/images/down.png'
+import CVpdf from '/public/PDF/CV_2026_new.pdf'
 import {
   faArrowLeftLong,
   faArrowRightLong,
@@ -204,6 +207,32 @@ const About = () => {
                 <p className="mt-2 text-sm leading-6 text-[#5f6d68]">{text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+            <h1 className='mx-auto text-4xl font-bold  text-black'>My Curriculum Vitae</h1>
+            <p className="mt-4 text-lg text-[#5f6d68]">
+              Here is my detailed curriculum vitae. To show our educational  background, skills, andexperiences <br />
+              in a clear and organized way. You can download it for your reference.
+            </p>
+      </section>
+      <section className="mx-auto max-w-4xl px-5 sm:px-8">
+        <div className="grid gap-5 grid-cols-1 p-5 bg-gray-300 rounded-lg">
+          <img className='w-full h-auto border-black/10 rounded-lg' src={Mycv} alt="My CV" />
+          <img className='w-10 h-9 mt-286 hover:bg-gray-400 rounded-sm p-1 absolute ml-177' src={down} alt="Icon Down Load" 
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = CVpdf;
+              link.download = "CV_2026_new.pdf";
+              link.click();
+            }}
+          />
+          <div className=' mx-auto w-4xl grid grid-cols-2'>
+            <h1 className='text-2xl mt-5 font-bold uppercase text-gray-800'>See Detail on My CV</h1>
+            <p className='text-sm mt-10 ml-63 font-medium text-[#17211d]'>Downlaod</p>
           </div>
         </div>
       </section>

@@ -41,11 +41,6 @@ const features = [
     'Products can be organized into categories to make inventory management easier and more efficient.',
   ],
   [
-    faClipboardList,
-    'Inventory Records',
-    'Users can view and manage inventory records to keep track of product changes and stock information.',
-  ],
-  [
     faChartLine,
     'Dashboard',
     'A dashboard provides a quick overview of important inventory information and system data.',
@@ -69,9 +64,9 @@ const roles = [
       'Manage inventory information and update stock records based on daily operations.',
   },
   {
-    title: 'Viewer',
+    title: 'Manager',
     description:
-      'View available products and inventory information without managing system data.',
+      'can view inventory information and reports, but cannot manage products or users.',
   },
 ]
 
@@ -145,7 +140,7 @@ const DetailIMS = ({ onNavigate }) => {
 
       <ProjectDetailSummary
         technologies={stack}
-        videoSrc="https://youtu.be/1RzfyuUDDug?si=evS956Ip88CPf9xf"
+        videoSrc="https://youtu.be/0nKbHgj6qxc?si=VVP0bMcE2RVaAsmC"
         advantages={[
           'Keeps products, categories, and stock organized.',
           'Provides a single dashboard for inventory visibility.',

@@ -8,6 +8,8 @@ import {
   faMobileScreen,
   faBolt,
 } from '@fortawesome/free-solid-svg-icons'
+import login from '/images/login.png';
+import register from '/images/register.png';
 
 const programmingLanguages = [
   { name: 'HTML5', description: 'Builds the Login form structure and accessible controls.' },
@@ -35,6 +37,13 @@ const DetailLogin = ({ onNavigate }) => {
             </a>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:px-8">
+              <div className="grid gap-5 grid-cols-2 p-5 bg-gray-300 rounded-lg">
+                <img className='w-100 h-auto border-black/10 rounded-lg' src={login} alt="Login Form" />
+                <img className='w-100 h-auto border-black/10 rounded-lg' src={register} alt="Register Form" />
+              </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

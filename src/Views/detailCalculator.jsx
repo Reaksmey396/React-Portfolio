@@ -7,6 +7,7 @@ import {
   faMobileScreen,
   faBolt,
 } from '@fortawesome/free-solid-svg-icons'
+import calculator from '/images/calculator.png';
 
 const programmingLanguages = [
   { name: 'HTML5', description: 'Builds the calculator structure and accessible controls.' },
@@ -45,6 +46,11 @@ const DetailCalculator = ({ onNavigate }) => {
         </div>
       </section>
 
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:px-8">
+        <div className="grid gap-5 grid-cols-1 p-5 bg-gray-300 rounded-lg">
+          <img className='w-full h-auto border-black/10 rounded-lg' src={calculator} alt="Calculator" />
+        </div>
+      </section>
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="grid gap-5 grid-cols-1">
           <article className="rounded-2xl border border-black/10 bg-white p-7 shadow-sm sm:p-9">
@@ -66,7 +72,7 @@ const DetailCalculator = ({ onNavigate }) => {
         </div>
       </section>
 
-      <section className="border-y border-black/10 bg-white">
+      <section className="border-y relative border-black/10 bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <div className="flex items-center gap-3">
             <span className="grid size-11 place-items-center rounded-xl bg-[#eef3ef] text-[#0f8b6f]"><FontAwesomeIcon icon={faCode} /></span>

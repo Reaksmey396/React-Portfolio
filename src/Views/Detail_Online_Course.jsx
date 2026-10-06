@@ -118,7 +118,7 @@ const DetailOnlineCourse = ({ onNavigate }) => {
 
       <ProjectDetailSummary
         technologies={stack}
-        videoSrc="https://youtu.be/vMCnKPT3zCY?si=7BicEsVMp4UbPhOD"
+        videoSrc="https://youtu.be/eJwtDQeN6d8?si=5SJGCS1HuYDmDMrN"
         advantages={[
           'Clear, student-friendly learning flow.',
           'Responsive reusable React components.',

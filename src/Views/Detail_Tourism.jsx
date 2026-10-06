@@ -101,7 +101,7 @@ const DetailTourismCambodia = ({ onNavigate }) => {
           <p className="mt-6 max-w-3xl text-base leading-8 text-[#5f6d68] sm:text-lg">
             A tourism website designed to introduce visitors to
             Cambodia’s destinations, culture, nature, and travel
-            experiences through a clean and responsive interface.
+            experiences through a clean and responsive interface. And you can visit my project link too: <a className='underline text-blue-500 hover:text-blue-300' href="https://reaksmey396.github.io/Tourism/">click this</a>.
           </p>
 
           {/* Technologies */}
@@ -121,7 +121,7 @@ const DetailTourismCambodia = ({ onNavigate }) => {
 
       <ProjectDetailSummary
         technologies={stack}
-        videoSrc="https://youtu.be/vkYl0e9yBsA?si=oCF7mL28a73emUUF"
+        videoSrc="https://youtu.be/naZ5iaCq7PI?si=VnOizJCT4B56_tCF"
         advantages={[
           'Makes Cambodian destinations easy to discover.',
           'Responsive layout for travellers on any device.',

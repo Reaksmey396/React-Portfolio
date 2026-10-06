@@ -115,7 +115,7 @@ const DetailPaySchoolFee = ({ onNavigate }) => {
 
       <ProjectDetailSummary
         technologies={stack}
-        videoSrc="https://youtu.be/ULJbBNWJjOs?si=T9Bg279g5TRNqjL_"
+        videoSrc="https://youtu.be/Zq2cC36A8J4?si=PChAKRv-Gi6uO041"
         advantages={[
           'Makes school-fee payments easier to track.',
           'Keeps payment information and receipts organized.',
@@ -280,7 +280,7 @@ const DetailPaySchoolFee = ({ onNavigate }) => {
               >
 
                 <span className="text-sm font-bold text-[#0f8b6f]">
-                  ROLE 0{index + 1}
+                   0{index + 1}
                 </span>
 
                 <h3 className="mt-3 text-xl font-bold text-[#17211d]">
