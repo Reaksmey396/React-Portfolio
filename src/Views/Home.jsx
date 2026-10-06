@@ -93,10 +93,6 @@ const Home = ({ onNavigate }) => {
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.22em] text-[#0f8b6f]">
-              <FontAwesomeIcon icon={faWandMagicSparkles} />
-              What I do
-            </p>
             <h2 className="mt-3 text-4xl font-bold text-[#17211d]">Simple, useful, responsive web work.</h2>
           </div>
           <button
