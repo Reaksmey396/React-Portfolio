@@ -123,7 +123,7 @@ const Projects = ({ onNavigate }) => {
               <FontAwesomeIcon icon={faDiagramProject} />
               Projects
             </p>
-            <h1 className="mt-3 text-5xl font-bold leading-tight text-[#17211d]">
+            <h1 className="mt-3 text-3xl sm:text-5xl font-bold leading-tight text-[#17211d]">
               Work I can build, improve, and explain.
             </h1>
             <p className="mt-5 text-lg leading-8 text-[#5f6d68]">
@@ -135,7 +135,7 @@ const Projects = ({ onNavigate }) => {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-5 sm:px-8">
-        <h1 className='text-4xl text-green-900 font-bold mb-5'>Visiting Big Projects</h1>
+        <h1 className='text-3xl sm:text-4xl text-green-900 font-bold mb-5'>Visiting Big Projects</h1>
         <p className='text-lg relative bottom-3'>Explore my biggest projects, built to solve real-world problems with modern web technologies.</p>
         <div className="grid gap-5 py-5 md:grid-cols-3">
           {projects.map((project) => (
@@ -173,7 +173,7 @@ const Projects = ({ onNavigate }) => {
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-5 sm:px-8">
-        <h1 className='text-4xl text-green-900 font-bold mb-5'>Visiting Small Projects</h1>
+        <h1 className='text-3xl sm:text-4xl text-green-900 font-bold mb-5'>Visiting Small Projects</h1>
         <p className='text-lg relative bottom-3'>Explore my small projects, built to solve real-world problems with web technologies.</p>
         <div className="grid gap-5 py-5 md:grid-cols-3">
           {small_project.map((s) => (

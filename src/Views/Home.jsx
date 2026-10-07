@@ -3,7 +3,7 @@ import { faArrowRight, faBriefcase, faCode, faLaptopCode, faWandMagicSparkles } 
 import heroImage from '/public/images/portfolio-hero.png'
 
 const stats = [
-  ['20', 'Years old'],
+  ['Skill Level', 'Junior Developer'],
   ['Year 3', 'RUPP ITE student'],
   ['10 weeks', 'Frontend internship'],
 ]
@@ -28,64 +28,94 @@ const Home = ({ onNavigate }) => {
   return (
     <main className="min-h-[calc(100vh-4rem)]">
       <section className="relative overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0">
           <img
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-[85%_center] opacity-80"
             src={heroImage}
             alt="Modern coding workspace with laptop and notebook"
           />
+
           <div className="absolute inset-0 bg-gradient-to-r from-[#f7f8f5] via-[#f7f8f5]/88 to-[#f7f8f5]/18" />
+
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#f7f8f5] to-transparent" />
         </div>
 
-        <div className="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl content-center px-5 py-20 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="max-w-3xl">
-            <p className="mb-5 inline-flex rounded-full border border-[#0f8b6f]/25 bg-white/75 px-4 py-2 text-sm font-semibold text-[#0f8b6f] shadow-sm">
+        {/* Content */}
+        <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl items-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+
+          <div className="w-full max-w-3xl">
+
+            {/* Badge */}
+            <p className="mb-4 inline-flex items-center rounded-full border border-[#0f8b6f]/25 bg-white/75 px-3 py-1.5 text-xs font-semibold text-[#0f8b6f] shadow-sm backdrop-blur sm:mb-5 sm:px-4 sm:py-2 sm:text-sm">
               <FontAwesomeIcon className="mr-2" icon={faLaptopCode} />
               Web Developer
             </p>
-            <h1 className="text-5xl font-bold leading-[1.02] text-[#17211d] sm:text-6xl lg:text-7xl">
+
+            {/* Title */}
+            <h1 className="text-3xl font-bold leading-tight text-[#17211d] xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               Smey's Coding
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4d5a55]">
-              Hello! my name is Khim Reaksmey. I am 20 years old, a third-year ITE student at RUPP.
-              I am interested in web development and I have learned on front end and back end of web development.
-              I have completed a 10-week internship as a front-end developer at ETEC Center.
+
+            {/* Description */}
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-[#4d5a55] sm:mt-6 sm:text-base sm:leading-7 md:text-lg md:leading-8">
+              Hello! My name is Khim Reaksmey. I am a third-year ITE student at RUPP.
+              I am interested in web development and have learned both frontend and
+              backend web development. I have also completed a 10-week internship
+              as a frontend developer at ETEC Center.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            {/* Stack */}
+            <div className="mt-5 flex max-w-2xl flex-wrap gap-2 sm:mt-6">
               {stack.map((item) => (
-                <span key={item} className="rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-sm font-semibold text-[#40504a] shadow-sm backdrop-blur">
+                <span
+                  key={item}
+                  className="rounded-full border border-black/10 bg-white/70 px-2.5 py-1 text-xs font-semibold text-[#40504a] shadow-sm backdrop-blur sm:px-3 sm:py-1.5 sm:text-sm"
+                >
                   {item}
                 </span>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <button
-                className="rounded-full bg-[#17211d] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#0f8b6f] hover:shadow-md"
-                onClick={() => onNavigate('projects')}
-                type="button"
-              >
-                View Projects
-              </button>
-              <button
-                className="rounded-full border border-[#17211d]/20 bg-white/75 px-6 py-3 text-sm font-semibold text-[#17211d] shadow-sm transition hover:-translate-y-0.5 hover:border-[#0f8b6f] hover:text-[#0f8b6f] hover:shadow-md"
-                onClick={() => onNavigate('contact')}
-                type="button"
-              >
-                Contact Me
-              </button>
+            {/* Buttons */}
+            <div className="mt-6 m:mt-8">
+              <div className='grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-5'>
+                <button
+                  className="w-full rounded-full bg-[#17211d] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#0f8b6f] hover:shadow-md xs:w-auto sm:px-6 sm:py-3"
+                  onClick={() => onNavigate('projects')}
+                  type="button"
+                >
+                  View Projects
+                </button>
+
+                <button
+                  className="w-full rounded-full border border-[#17211d]/20 bg-white/75 px-5 py-2.5 text-sm font-semibold text-[#17211d] shadow-sm transition hover:-translate-y-0.5 hover:border-[#0f8b6f] hover:text-[#0f8b6f] hover:shadow-md xs:w-auto sm:px-6 sm:py-3"
+                  onClick={() => onNavigate('contact')}
+                  type="button"
+                >
+                  Contact Me
+                </button>
+              </div>
             </div>
 
-            <div className="mt-12 grid max-w-2xl grid-cols-3 gap-3">
+            {/* Stats */}
+            <div className="mt-8 grid w-full max-w-3xl grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-3">
               {stats.map(([value, label]) => (
-                <div key={label} className="rounded-lg border border-black/10 border-l-4 border-l-[#0f8b6f] bg-white/70 px-4 py-4 shadow-sm backdrop-blur">
-                  <p className="text-xl font-bold text-[#17211d]">{value}</p>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-wide text-[#66736e]">{label}</p>
+                <div
+                  key={label}
+                  className="rounded-lg border border-black/10 border-l-4 border-l-[#0f8b6f] bg-white/70 px-4 py-3 shadow-sm backdrop-blur sm:px-4 sm:py-4"
+                >
+                  <p className="text-lg font-bold text-[#17211d] sm:text-xl">
+                    {value}
+                  </p>
+
+                  <p className="mt-1 text-[10px] font-medium uppercase tracking-wide text-[#66736e] sm:text-xs">
+                    {label}
+                  </p>
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </section>
@@ -93,7 +123,10 @@ const Home = ({ onNavigate }) => {
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <h2 className="mt-3 text-4xl font-bold text-[#17211d]">Simple, useful, responsive web work.</h2>
+            <h2 className="mt-3 text-4xl font-bold text-[#17211d]">My Highlights</h2>
+            <p className="text-lg mt-3 text-[#5f6d68]">
+              Here are some of my key achievements and experiences that showcase my skills and passion for web development.
+            </p>
           </div>
           <button
             className="w-fit rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-semibold text-[#17211d] transition hover:border-[#0f8b6f] hover:text-[#0f8b6f]"

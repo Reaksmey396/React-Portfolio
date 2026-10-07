@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faDatabase, faSeedling } from '@fortawesome/free-solid-svg-icons'
+import { faBookOpen, faCode, faCommentDots, faDatabase, faLanguage, faLightbulb, faSeedling, faUsers } from '@fortawesome/free-solid-svg-icons'
 import {
   faBootstrap,
   faCss3Alt,
@@ -33,17 +33,41 @@ const skills = [
   { name: 'Spring Boot', level: 40, icon: faSeedling, color: 'from-lime-500 to-green-700', description: 'Learning Java backend applications and REST APIs.' },
 ]
 
+const languages = [
+  { name: 'English', level: 'Intermediate Level' },
+  { name: 'Khmer', level: 'Native' },
+]
+
+const softSkills = [
+  {
+    name: 'Communication',
+    description: 'I communicate clearly and effectively with team members and clients.',
+    icon: faCommentDots,
+  },
+  {
+    name: 'Teamwork',
+    description: 'I work well with others and contribute positively to team projects.',
+    icon: faUsers,
+  },
+  {
+    name: 'Problem Solving',
+    description: 'I approach problems logically and look for practical solutions.',
+    icon: faLightbulb,
+  },
+  {
+    name: 'Willingness to Learn',
+    description: 'I am willing to learn new technologies and improve my skills.',
+    icon: faBookOpen,
+  },
+]
+
 const Skills = () => {
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f8f5]">
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.22em] text-[#0f8b6f]">
-              <FontAwesomeIcon icon={faCode} />
-              Skills
-            </p>
-            <h1 className="mt-3 text-4xl font-bold leading-tight text-[#17211d]">
+            <h1 className="mt-3 text-3xl sm:text-4xl  font-bold leading-tight text-[#17211d]">
               Technologies I understand and use.
             </h1>
             <p className="mt-5 text-lg leading-8 text-[#5f6d68]">
@@ -55,6 +79,8 @@ const Skills = () => {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+        <h1 className='text-3xl sm:text-4xl text-green-900 font-bold mb-5'>Programming languages :</h1>
+        <p className='text-lg mb-5 relative bottom-3'>Here are the programming languages I am proficient in and have experience with.</p>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {skills.map(({ name, level, icon, color, description }) => (
             <article
@@ -86,6 +112,47 @@ const Skills = () => {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8">
+        <h2 className="mb-5 text-3xl stext-4xl font-bold text-green-900">Soft Skills</h2>
+        <p className="mb-6 text-lg text-[#5f6d68]">
+          In addition to technical skills, I use these strengths to work effectively with others.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {softSkills.map(({ name, description, icon }) => (
+            <article key={name} className="rounded-xl border border-black/10 bg-white p-5 shadow-sm">
+              <span className="inline-flex size-11 items-center justify-center rounded-xl bg-[#e1f2ec] text-lg text-[#0f8b6f]">
+                <FontAwesomeIcon icon={icon} />
+              </span>
+              <h3 className="mt-4 text-xl font-bold text-[#17211d]">{name}</h3>
+              <p className="mt-2 leading-7 text-[#5f6d68]">{description}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-10">
+          <h2 className="mb-5 text-3xl sm:text-4xl font-bold text-green-900">Foreign Languages</h2>
+        <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm sm:p-8">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex size-11 items-center justify-center rounded-xl bg-[#e1f2ec] text-[#0f8b6f]">
+              <FontAwesomeIcon icon={faLanguage} />
+            </span>
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#0f8b6f]">Communication</p>
+              <h3 className="text-2xl font-bold text-[#17211d]">Languages</h3>
+            </div>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {languages.map(({ name, level }) => (
+              <div key={name} className="rounded-xl bg-[#f7f8f5] p-5">
+                <p className="text-lg font-bold text-[#17211d]">{name}</p>
+                <p className="mt-1 text-[#5f6d68]">{level}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         </div>
       </section>
     </main>

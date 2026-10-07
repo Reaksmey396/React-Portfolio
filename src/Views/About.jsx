@@ -68,7 +68,7 @@ const About = () => {
       <section className="bg-white py-10">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <h1 className="text-5xl relative bottom-5 font-bold leading-tight text-[#17211d]">
+            <h1 className="text-4xl md:text-5xl relative bottom-5 font-bold leading-tight text-[#17211d]">
               My Background Profile
             </h1>
             <p className="mt-5 text-lg leading-8 text-[#5f6d68]">
@@ -131,63 +131,6 @@ const About = () => {
         </div>
       </section>
 
-
-      <section className="bg-[#eef3ef] py-10">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <div>
-              <h2 className="mt-3 text-4xl font-bold text-[#17211d]">Other Information</h2>
-              <p className="mt-5 leading-8 text-[#5f6d68]">
-                These details summarize my study background, current level, and the personal
-                habits I bring into each web project.
-              </p>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              {education.map(([label, value, icon]) => (
-                <div key={label} className="rounded-lg border border-black/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-                  <div className="flex items-start gap-4">
-                    <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#eef3ef] text-[#0f8b6f]">
-                      <FontAwesomeIcon icon={icon} />
-                    </span>
-                    <div>
-                      <p className="text-sm font-medium uppercase tracking-wide text-[#0f8b6f]">{label}</p>
-                      <p className="mt-2 text-xl font-medium leading-7 text-[#17211d]">{value}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="mx-auto max-w-7xl px-5 py-5 sm:px-8">
-            <h1 className='mx-auto text-4xl font-bold  text-black'>My Curriculum Vitae</h1>
-            <p className="mt-4 text-lg text-[#5f6d68]">
-              Here is my detailed curriculum vitae. To show our educational  background, skills, andexperiences <br />
-              in a clear and organized way. You can download it for your reference.
-            </p>
-      </section>
-      <section className="mx-auto max-w-4xl py-5 px-5 sm:px-8">
-        <div className="grid gap-5 grid-cols-1 p-5 bg-gray-300 rounded-lg">
-          <img className='w-full h-auto border-black/10 rounded-lg' src={Mycv} alt="My CV" />
-          <img className='w-10 h-9 mt-286 hover:bg-gray-400 rounded-sm p-1 absolute ml-177' src={down} alt="Icon Down Load" 
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = CVpdf;
-              link.download = "CV_2026_new.pdf";
-              link.click();
-            }}
-          />
-          <div className=' mx-auto w-4xl grid grid-cols-2'>
-            <h1 className='text-2xl mt-5 font-bold uppercase text-gray-800'>See Detail on My CV</h1>
-            <p className='text-sm mt-10 ml-63 font-medium text-[#17211d]'>Downlaod</p>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-gray-200 py-10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <h1 className="text-3xl font-bold text-[#17211d]">Personal Qualities</h1>
@@ -207,6 +150,76 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-8">
+  <h1 className="text-3xl font-bold text-black sm:text-4xl">
+    My Curriculum Vitae
+  </h1>
+
+  <p className="mt-4 max-w-3xl text-base leading-7 text-[#5f6d68] sm:text-lg">
+    Here is my detailed curriculum vitae, showcasing my educational
+    background, skills, and experience in a clear and organized way.
+    You can download it for your reference.
+  </p>
+</section>
+
+<section className="mx-auto max-w-4xl px-5 pb-10 sm:px-8">
+  <div className="overflow-hidden rounded-lg bg-gray-300 p-4 sm:p-5">
+
+    {/* CV Image */}
+    <div className="relative">
+      <img
+        className="h-auto w-full rounded-lg border border-black/10"
+        src={Mycv}
+        alt="Khim Reaksmey Curriculum Vitae"
+      />
+
+      {/* Download Button */}
+      <button
+        type="button"
+        className="absolute right-3 top-3 rounded-md bg-white/90 p-2 shadow-md transition hover:bg-gray-200"
+        onClick={() => {
+          const link = document.createElement("a");
+          link.href = CVpdf;
+          link.download = "CV_2026_new.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }}
+        aria-label="Download CV"
+      >
+        <img
+          className="h-7 w-7"
+          src={down}
+          alt=""
+        />
+      </button>
+    </div>
+
+    {/* CV Information */}
+    <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <h2 className="text-xl font-bold uppercase text-gray-800 sm:text-2xl">
+        See Details on My CV
+      </h2>
+
+      <button
+        type="button"
+        className="w-fit text-sm font-medium text-[#17211d] underline underline-offset-4 transition hover:text-gray-600"
+        onClick={() => {
+          const link = document.createElement("a");
+          link.href = CVpdf;
+          link.download = "CV_2026_new.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }}
+      >
+        Download CV
+      </button>
+    </div>
+
+  </div>
+</section>
     </main>
   )
 }
